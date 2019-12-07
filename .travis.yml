@@ -1,5 +1,5 @@
 os: linux
-dist: xenial
+dist: bionic
 language: php
 
 git:
@@ -27,7 +27,7 @@ jobs:
       script: bin/phing lint
 
     - stage: Lint
-      php: 7.4snapshot
+      php: 7.4
       env: DEPENDENCIES=highest
       script: bin/phing lint
 
@@ -128,12 +128,12 @@ jobs:
       script: bin/phing tests-without-code-coverage
 
     - stage: Tests
-      php: 7.4snapshot
+      php: 7.4
       env: DEPENDENCIES=lowest
       script: bin/phing tests-without-code-coverage
 
     - stage: Tests
-      php: 7.4snapshot
+      php: 7.4
       env: DEPENDENCIES=highest
       script: bin/phing tests-without-code-coverage
 
